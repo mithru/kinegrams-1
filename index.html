@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <fieldset>
+      <legend>Select a mode</legend>
+
+      <div class="controlPanel">
+
+        <div class="section" id="modeSelector">
+          <select id="mode" onchange="changeMode()">
+            <option value="image">Image - demo</option>
+            <option value="camera">Camera</option>
+            <option value="upload">Upload images</option>
+<!--        <option value="gif">Link to GIF</option> -->
+          </select>
+        </div>
+
+        <div class="section">
+          <button type="button" class="specificModeButtons" id="takePicBtn">Take a picture</button>
+<!--                 <div class="specificModeButtons" id="overlayToggleDiv"> -->
+<!--                     <input type="checkbox" id="overlayToggle" name="overlay" value="overlay" />
+              <label for="overlayToggle">Show Overlay</label> -->
+<!--                 </div> -->
+<!--                 <input type="checkbox" name="overlayToggle" class="specificModeButtons" value="Overlaytoggle" >test -->
+          <input type="file" accept=".jpg, .jpeg, .png" multiple="" class="specificModeButtons" id="uploadPicBtn">
+        </div>
+
+        <div class="section">
+          <button type="button" class="specificModeButtons" id="submitImageBtn">Upload!</button>
+        </div>
+
+        <div>
+          <button type="button" id="saveBtn">Save to computer</button>
+          </div>
+      </div>
+
+    </fieldset>
+
+    <script src="sketch.js"></script>
+    <script src="Kinegram.js"></script>
+    <script src="callbacks.js"></script>
+  </body>
+</html>
